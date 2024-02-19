@@ -15,29 +15,34 @@ namespace Persistence
             _dbContext = dbContext;
         }
 
-        public Task AddAsync(Product product)
+        public void Add(Product product)
         {
-            throw new NotImplementedException();
+            _dbContext.Products.Add(product);
         }
 
-        public Task DeleteAsync(Product product)
+        public void Delete(Product product)
         {
-            throw new NotImplementedException();
+            _dbContext.Products.Remove(product);
         }
 
-        public Task<IEnumerable<Product>> GetAllAsync()
+        public async Task<IEnumerable<Product>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _dbContext.Products.ToListAsync();
         }
 
-        public Task<Product> GetByIdAsync(int id)
+        public async Task<Product> GetProductByIdAsync(int productId)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Products.FirstAsync(p => p.Id == productId);
         }
 
-        public Task UpdateAsync(Product product)
+        public async Task<Product> GetProductByBarcode(string barcode)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Products.FirstAsync(p => p.Barcode == barcode);
+        }
+
+        public void Update(Product product)
+        {
+            _dbContext.Products.Update(product);
         }
     }
 }

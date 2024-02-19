@@ -15,26 +15,36 @@ namespace Persistence
             _dbContext = dbContext;
         }
 
-     
-
-        public Task AddAsync(User user)
+        //CRUD Tasks 
+        public void Add(User user)
         {
-            throw new NotImplementedException();
+             _dbContext.Users.Add(user);
         }
 
-        public Task DeleteAsync(User user)
+        public void Delete(User user)
         {
-            throw new NotImplementedException();
+            _dbContext.Users.Remove(user);
         }
 
-        public Task<IEnumerable<User>> GetAllAsync()
+        public async Task<IEnumerable<User>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _dbContext.Users.ToListAsync();
         }
 
-        public Task UpdateAsync(User user)
+        public void Update(User user)
         {
-            throw new NotImplementedException();
+            _dbContext.Users.Update(user);
+        }
+
+        //Other
+        public async Task<User> GetUserByEmailAndPassword(string email, string password)
+        {
+            return await _dbContext.Users.FirstAsync(u => u.Email == email && u.Password == password)!;
+        }
+
+        public async Task<User> GetUserById(int userId)
+        {
+            return await _dbContext.Users.FirstAsync(u => u.Id == userId);
         }
     }
 }

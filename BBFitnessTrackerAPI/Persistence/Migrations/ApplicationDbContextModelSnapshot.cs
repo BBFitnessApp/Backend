@@ -97,6 +97,9 @@ namespace Persistence.Migrations
                     b.Property<int>("Gender")
                         .HasColumnType("int");
 
+                    b.Property<int>("Height")
+                        .HasColumnType("int");
+
                     b.Property<int>("Kalorienziel")
                         .HasColumnType("int");
 

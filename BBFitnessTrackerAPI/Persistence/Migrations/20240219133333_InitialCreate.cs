@@ -39,6 +39,7 @@ namespace Persistence.Migrations
                     Gender = table.Column<int>(type: "int", nullable: false),
                     ZielSpezifikation = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BMI = table.Column<double>(type: "float", nullable: false),
+                    Height = table.Column<int>(type: "int", nullable: false),
                     Kalorienziel = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

@@ -46,7 +46,7 @@ namespace Persistence
             }
             return await _dbContext.SaveChangesAsync();
 
-       }
+        }
 
         private void ValidateEntity(object entity)
         {
@@ -75,8 +75,6 @@ namespace Persistence
         {
             _dbContext.Dispose();
         }
-
-
         /*
         public async Task FillDbAsync()
         {
@@ -129,6 +127,5 @@ namespace Persistence
 
             await SaveChangesAsync();
         }*/
-
     }
 }

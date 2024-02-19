@@ -7,10 +7,13 @@ namespace Core.Contracts
 {
     public interface IUserRepository
     {
-     //   Task<User> GetByIdAsync(int id);
+        Task<User> GetUserByEmailAndPassword(string email, string password);
+
+        Task<User> GetUserById(int userId);
+
         Task<IEnumerable<User>> GetAllAsync();
-        Task AddAsync(User user);
-        Task UpdateAsync(User user);
-        Task DeleteAsync(User user);
+        void Add(User user);
+        void Update(User user);
+        void Delete(User user);
     }
 }

@@ -18,7 +18,7 @@ namespace Core.Entities
         public string UserName { get; set; } = string.Empty;
 
         [Required]
-        [RegularExpression(@"^[a-zA-Z0-9]{3,15}$", ErrorMessage = "Password must be 3-15 characters long and contain only letters and digits.")]
+        //[RegularExpression(@"^[a-zA-Z0-9]{3,15}$", ErrorMessage = "Password must be 3-15 characters long and contain only letters and digits.")]
         public string Password { get; set; } = string.Empty;
         public int Age { get; set; }
         public int Weight { get; set; }
@@ -26,12 +26,13 @@ namespace Core.Entities
         [Required]
         public Gender Gender { get; set; }
 
-        public string ZielSpezifikation { get; set; } = string.Empty; //muskelaufbau ,gewichtsverlust usw. ...
+        public string ZielSpezifikation { get; set; } = string.Empty; //muskelaufbau ,gewichtsverlust, gewichthaltung 
 
         [Required]
         public double BMI { get; set; }
 
+        public int Height { get; set; }
+
         public int Kalorienziel { get; set; }
     }
 }
-   

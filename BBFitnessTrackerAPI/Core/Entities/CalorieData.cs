@@ -20,5 +20,7 @@ namespace Core.Entities
         public int Kalorienaufnahme { get; set; }
         
         public int Fette { get; set; }
+
+
     }
 }

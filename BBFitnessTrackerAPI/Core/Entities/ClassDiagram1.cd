@@ -1,32 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Core.Entities.Customer" Collapsed="true">
-    <Position X="7.25" Y="3.25" Width="1.5" />
+  <Class Name="Core.Entities.Product">
+    <Position X="4.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAg=</HashCode>
-      <FileName>Entities\Customer.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Core.Entities.Order" Collapsed="true">
-    <Position X="1.75" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAFAAAAAAAEAAAAAAgAAAAAAAAAAABABAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\Order.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Core.Entities.OrderItem" Collapsed="true">
-    <Position X="4.5" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>EAECAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\OrderItem.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Core.Entities.Product" Collapsed="true">
-    <Position X="4.75" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAEAAAEAAAAAEAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Entities.User">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAABCAAABCAAMAAAAAAACAAAAACBQAAAAAAAAA=</HashCode>
+      <FileName>Entities\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Entities.CalorieData">
+    <Position X="6.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAADAAAAAAAAAAEAAAAAAAgAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CalorieData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
