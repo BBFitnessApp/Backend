@@ -40,6 +40,17 @@ namespace Users.Web.ApiControllers
         }
 
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
+        [HttpGet("getUserByEmail")]
+        public async Task<IActionResult> GetUserByEmail(string email)
+        {
+            var user = await _unitOfWork.UserRepository.GetUserByEmail(email);
+            if (user == null)
+                return NotFound();
+
+            return Ok(user);
+        }
+
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginModel model)
         {

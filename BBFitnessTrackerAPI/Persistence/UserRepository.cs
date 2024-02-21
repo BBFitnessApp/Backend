@@ -36,7 +36,6 @@ namespace Persistence
             _dbContext.Users.Update(user);
         }
 
-        //Other
         public async Task<User> GetUserByEmailAndPassword(string email, string password)
         {
             return await _dbContext.Users.FirstAsync(u => u.Email == email && u.Password == password)!;
@@ -45,6 +44,11 @@ namespace Persistence
         public async Task<User> GetUserById(int userId)
         {
             return await _dbContext.Users.FirstAsync(u => u.Id == userId);
+        }
+
+        public async Task<User> GetUserByEmail(string email)
+        {
+            return await _dbContext.Users.FirstAsync(u => u.Email == email);
         }
 
         public async Task<int> GetCountAsync()

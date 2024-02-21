@@ -158,7 +158,7 @@ namespace Persistence
                     {
                          Email = "john@example.com",
                         UserName = "JohnDoe",
-                        Password = "password123",
+                        //Password = "password123",
                         Age = 30,
                         Weight = 75,
                         Gender = Gender.Male,
@@ -171,7 +171,7 @@ namespace Persistence
                     {
                          Email = "jane@example.com",
                         UserName = "JaneDoe",
-                        Password = "password456",
+                        //Password = "password456",
                         Age = 35,
                         Weight = 65,
                         Gender = Gender.Female,
@@ -185,7 +185,7 @@ namespace Persistence
 
                          Email = "alice@example.com",
                         UserName = "AliceSmith",
-                        Password = "password789",
+                        //Password = "password789",
                         Age = 28,
                         Weight = 60,
                         Gender = Gender.Female,
@@ -198,7 +198,7 @@ namespace Persistence
                     {
                          Email = "bob@example.com",
                         UserName = "BobJohnson",
-                        Password = "passwordabc",
+                        //Password = "passwordabc",
                         Age = 40,
                         Weight = 85,
                         Gender = Gender.Male,
@@ -212,7 +212,7 @@ namespace Persistence
 
                          Email = "emma@example.com",
                         UserName = "EmmaTaylor",
-                        Password = "passwordxyz",
+                        //Password = "passwordxyz",
                         Age = 45,
                         Weight = 70,
                         Gender = Gender.Female,
@@ -225,7 +225,7 @@ namespace Persistence
                     {
                          Email = "will@example.com",
                         UserName = "WilliamBrown",
-                        Password = "password123456",
+                        //Password = "password123456",
                         Age = 32,
                         Weight = 80,
                         Gender = Gender.Male,
@@ -238,7 +238,7 @@ namespace Persistence
                     {
                          Email = "lisa@example.com",
                         UserName = "LisaJones",
-                        Password = "password7891011",
+                        //Password = "password7891011",
                         Age = 29,
                         Weight = 55,
                         Gender = Gender.Female,
@@ -251,7 +251,7 @@ namespace Persistence
                     {   
                         Email = "mike@example.com",
                         UserName = "MikeWilliams",
-                        Password = "password123abc",
+                        //Password = "password123abc",
                         Age = 38,
                         Weight = 90,
                         Gender = Gender.Male,
@@ -266,7 +266,7 @@ namespace Persistence
                            
                         Email = "sarah@example.com",
                         UserName = "SarahWilson",
-                        Password = "passwordxyz789",
+                        //Password = "passwordxyz789",
                         Age = 27,
                         Weight = 63,
                         Gender = Gender.Female,
@@ -280,7 +280,7 @@ namespace Persistence
                           
                         Email = "david@example.com",
                         UserName = "DavidAnderson",
-                        Password = "password456abc",
+                        //Password = "password456abc",
                         Age = 42,
                         Weight = 78,
                         Gender = Gender.Male,

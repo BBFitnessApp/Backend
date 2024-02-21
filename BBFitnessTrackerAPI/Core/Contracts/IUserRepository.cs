@@ -10,7 +10,7 @@ namespace Core.Contracts
         Task<User> GetUserByEmailAndPassword(string email, string password);
 
         Task<User> GetUserById(int userId);
-
+        Task<User> GetUserByEmail(string email);
         Task<IEnumerable<User>> GetAllAsync();
         void Add(User user);
         void Update(User user);
