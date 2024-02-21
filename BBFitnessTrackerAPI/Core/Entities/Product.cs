@@ -9,9 +9,11 @@ namespace Core.Entities
     public class Product
     {
         public int Id { get; set; }
-        public string Barcode { get; set; } = string.Empty; // Barcode (String oder Integer, je nach Barcode-Format)
+        public string Barcode { get; set; } = string.Empty; // Barcode aka Spoontacular ID 
         public string Produktname { get; set; } = string.Empty; // Produktname (String)
-        public int Kalorien { get; set; } // Kalorien (Integer)
-        public int Fette { get; set; } // Fette (Integer)
+        public double Kalorien { get; set; } // Kalorien (Integer)
+        public double Fette { get; set; } // Fette (Integer)
+        public double Proteine { get; set; }
+        public double Kohlenhydrate { get; set; }
     }
 }

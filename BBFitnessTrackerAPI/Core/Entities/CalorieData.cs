@@ -18,9 +18,8 @@ namespace Core.Entities
         public DateTime Datum { get; set; }
         
         public int Kalorienaufnahme { get; set; }
-        
         public int Fette { get; set; }
-
-
+        public int Proteine { get; set; }
+        public int Kohlenhydrate { get; set; }
     }
 }

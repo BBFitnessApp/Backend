@@ -12,6 +12,8 @@ namespace WebApi.Controllers
         {
             _unitOfWork = unitOfWork;
         }
+        
+
 
         [ProducesResponseType(typeof(List<CalorieData>), StatusCodes.Status200OK)]
         [HttpGet("{userId}/{date}")]
