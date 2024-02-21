@@ -138,7 +138,8 @@ namespace WebApi.Controllers
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
         }
-                [ProducesResponseType(typeof(Product), 201)]
+       
+        [ProducesResponseType(typeof(Product), 201)]
         [HttpPost]
         public async Task<IActionResult> AddProduct([FromBody] Product product)
         {

@@ -14,5 +14,6 @@ namespace Core.Contracts
         void Add(Product product);
         void Update(Product product);
         void Delete(Product product);
+        Task<int> GetCountAsync();
     }
 }

@@ -44,5 +44,10 @@ namespace Persistence
         {
             _dbContext.Products.Update(product);
         }
+
+        public async Task<int> GetCountAsync()
+        {
+            return await _dbContext.Products.CountAsync();
+        }
     }
 }

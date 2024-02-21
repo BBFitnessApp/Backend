@@ -14,9 +14,7 @@ namespace Core.Entities
        
         [ForeignKey(nameof(UserId))]
         public User ? User { get; set; } 
-        
         public DateTime Datum { get; set; }
-        
         public int Kalorienaufnahme { get; set; }
         public int Fette { get; set; }
         public int Proteine { get; set; }

@@ -8,11 +8,18 @@ Console.WriteLine("Daten werden eingelesen!\n");
 
 using IUnitOfWork unitOfWork = new UnitOfWork();
 
-Console.WriteLine("Devices, People und Usages werden eingelesen");
-await unitOfWork.FillDbAsync();
+Console.WriteLine("Einlesen");
+unitOfWork.SeedData();
 
-int cnt = await unitOfWork.UsageRepository.GetCountAsync();
-Console.WriteLine("{0} Usages in Datenbank importiert!", cnt);
+int cnt = await unitOfWork.UserRepository.GetCountAsync();
+Console.WriteLine("{0} User in Datenbank importiert!", cnt);
+
+int cnt1 = await unitOfWork.CalorieDataRepository.GetCountAsync();
+Console.WriteLine("{0} mal CalorieData in Datenbank importiert!", cnt1);
+
+int cnt3 = await unitOfWork.ProductRepository.GetCountAsync();
+Console.WriteLine("{0} Products in Datenbank importiert!", cnt3);
+
 Console.WriteLine("<Taste drücken>");
 Console.ReadKey();
 

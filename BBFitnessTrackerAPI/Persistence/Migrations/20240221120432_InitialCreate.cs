@@ -17,8 +17,10 @@ namespace Persistence.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Barcode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Produktname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Kalorien = table.Column<int>(type: "int", nullable: false),
-                    Fette = table.Column<int>(type: "int", nullable: false)
+                    Kalorien = table.Column<double>(type: "float", nullable: false),
+                    Fette = table.Column<double>(type: "float", nullable: false),
+                    Proteine = table.Column<double>(type: "float", nullable: false),
+                    Kohlenhydrate = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -56,7 +58,9 @@ namespace Persistence.Migrations
                     UserId = table.Column<int>(type: "int", nullable: false),
                     Datum = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Kalorienaufnahme = table.Column<int>(type: "int", nullable: false),
-                    Fette = table.Column<int>(type: "int", nullable: false)
+                    Fette = table.Column<int>(type: "int", nullable: false),
+                    Proteine = table.Column<int>(type: "int", nullable: false),
+                    Kohlenhydrate = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

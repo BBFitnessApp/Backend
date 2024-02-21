@@ -1,0 +1,11 @@
+Email,UserName,Password,Age,Weight,Gender,ZielSpezifikation,BMI,Height,Kalorienziel
+john@example.com,JohnDoe,password123,30,75,Male,Gewichtsverlust,25,180,2000
+jane@example.com,JaneDoe,password456,35,65,Female,Gewichthaltung,22,165,1800
+alice@example.com,AliceSmith,password789,28,60,Female,Muskelaufbau,23,170,2200
+bob@example.com,BobJohnson,passwordabc,40,85,Male,Gewichtsverlust,27,175,1900
+emma@example.com,EmmaTaylor,passwordxyz,45,70,Female,Gewichtsverlust,24,160,2100
+will@example.com,WilliamBrown,password123456,32,80,Male,Muskelaufbau,26,185,2400
+lisa@example.com,LisaJones,password7891011,29,55,Female,Gewichthaltung,21,155,1700
+mike@example.com,MikeWilliams,password123abc,38,90,Male,Gewichtsverlust,28,190,2000
+sarah@example.com,SarahWilson,passwordxyz789,27,63,Female,Muskelaufbau,22.5,168,2300
+david@example.com,DavidAnderson,password456abc,42,78,Male,Gewichthaltung,25,178,1800

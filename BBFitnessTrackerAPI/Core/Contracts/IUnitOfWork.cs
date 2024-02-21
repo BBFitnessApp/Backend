@@ -16,7 +16,7 @@ namespace Core.Contracts
         Task DeleteDatabaseAsync();
         Task MigrateDatabaseAsync();
         Task CreateDatabaseAsync();
-
-       // Task FillDbAsync();
+        public void SeedData();
+        //  Task FillDbAsync();
     }
 }

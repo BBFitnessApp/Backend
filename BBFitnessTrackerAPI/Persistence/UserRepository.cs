@@ -46,5 +46,10 @@ namespace Persistence
         {
             return await _dbContext.Users.FirstAsync(u => u.Id == userId);
         }
+
+        public async Task<int> GetCountAsync()
+        {
+            return await _dbContext.Users.CountAsync();
+        }
     }
 }

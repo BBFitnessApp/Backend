@@ -12,7 +12,7 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240219133333_InitialCreate")]
+    [Migration("20240221120432_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,6 +41,12 @@ namespace Persistence.Migrations
                     b.Property<int>("Kalorienaufnahme")
                         .HasColumnType("int");
 
+                    b.Property<int>("Kohlenhydrate")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Proteine")
+                        .HasColumnType("int");
+
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
@@ -63,15 +69,21 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Fette")
-                        .HasColumnType("int");
+                    b.Property<double>("Fette")
+                        .HasColumnType("float");
 
-                    b.Property<int>("Kalorien")
-                        .HasColumnType("int");
+                    b.Property<double>("Kalorien")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Kohlenhydrate")
+                        .HasColumnType("float");
 
                     b.Property<string>("Produktname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Proteine")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

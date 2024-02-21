@@ -44,8 +44,8 @@ namespace Users.Web.ApiControllers
         public async Task<IActionResult> Login([FromBody] UserLoginModel model)
         {
             var user = await _unitOfWork.UserRepository.GetUserByEmailAndPassword(model.Email, model.Password);
-            if (user == null)
-                return NotFound();
+            if (user == null || !user.VerifyPassword(model.Password))
+                return NotFound();  
 
             return Ok(user);
         }
