@@ -20,7 +20,6 @@ namespace Core.Entities
 
         private string _password = string.Empty;
 
-        [Required]
         //[RegularExpression(@"^[a-zA-Z0-9]{3,15}$", ErrorMessage = "Password must be 3-15 characters long and contain only letters and digits.")]
         public string Password
         {
