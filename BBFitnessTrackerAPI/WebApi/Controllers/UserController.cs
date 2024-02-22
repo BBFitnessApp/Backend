@@ -81,5 +81,22 @@ namespace Users.Web.ApiControllers
             _unitOfWork.UserRepository.Delete(user);
             return NoContent();
         }
+
+        [ProducesResponseType(204)]
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUser(int id, [FromBody] User user)
+        {
+            if (id != user.Id)
+            {
+
+                return BadRequest();
+            }
+
+            _unitOfWork.UserRepository.Update(user);
+            await _unitOfWork.SaveChangesAsync();
+            return NoContent();
+
+        }
+
     }
 }
