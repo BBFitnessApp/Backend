@@ -156,7 +156,7 @@ namespace Persistence
                 {
                     new User
                     {
-                         Email = "john@example.com",
+                        Email = "john@example.com",
                         UserName = "JohnDoe",
                         //Password = "password123",
                         Age = 30,
@@ -183,7 +183,7 @@ namespace Persistence
                     new User
                     {
 
-                         Email = "alice@example.com",
+                        Email = "alice@example.com",
                         UserName = "AliceSmith",
                         //Password = "password789",
                         Age = 28,
@@ -196,7 +196,7 @@ namespace Persistence
                     },
                     new User
                     {
-                         Email = "bob@example.com",
+                        Email = "bob@example.com",
                         UserName = "BobJohnson",
                         //Password = "passwordabc",
                         Age = 40,
@@ -210,7 +210,7 @@ namespace Persistence
                     new User
                     {
 
-                         Email = "emma@example.com",
+                        Email = "emma@example.com",
                         UserName = "EmmaTaylor",
                         //Password = "passwordxyz",
                         Age = 45,
@@ -223,7 +223,7 @@ namespace Persistence
                     },
                     new User
                     {
-                         Email = "will@example.com",
+                        Email = "will@example.com",
                         UserName = "WilliamBrown",
                         //Password = "password123456",
                         Age = 32,

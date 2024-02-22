@@ -75,5 +75,89 @@ namespace WebApi.Controllers
             await _unitOfWork.SaveChangesAsync();
             return NoContent();
         }
+
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [HttpGet("ProteinIntakeByToday/{email}")]
+        public async Task<IActionResult> ProteinIntakeByToday(string email)
+        {
+            var user = await _unitOfWork.UserRepository.GetUserByEmail(email);
+            if (user == null)
+                return NotFound("User not found");
+
+            var proteinIntake = await _unitOfWork.CalorieDataRepository.ProteinIntakeByToday(user.Id);
+            return Ok(proteinIntake);
+        }
+
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [HttpGet("FetteIntakeByToday/{email}")]
+        public async Task<IActionResult> FetteIntakeByToday(string email)
+        {
+            var user = await _unitOfWork.UserRepository.GetUserByEmail(email);
+            if (user == null)
+                return NotFound("User not found");
+
+            var fetteIntake = await _unitOfWork.CalorieDataRepository.FetteIntakeByToday(user.Id);
+            return Ok(fetteIntake);
+        }
+
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [HttpGet("CalorieIntakeByToday/{email}/{date}")]
+        public async Task<IActionResult> CalorieIntakeByDay(string email, DateTime date)
+        {
+            var user = await _unitOfWork.UserRepository.GetUserByEmail(email);
+            if (user == null)
+                return NotFound("User not found");
+
+            var calorieIntake = await _unitOfWork.CalorieDataRepository.CalorieIntakeByDay(user.Id, date);
+            return Ok(calorieIntake);
+        }
+
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [HttpGet("KohlenhydrateByDay/{email}/{date}")]
+        public async Task<IActionResult> KohlenhydrateByDay(string email, DateTime date)
+        {
+            var user = await _unitOfWork.UserRepository.GetUserByEmail(email);
+            if (user == null)
+                return NotFound("User not found");
+
+            var kohlenhydrateIntake = await _unitOfWork.CalorieDataRepository.KohlenhydrateByDay(user.Id, date);
+            return Ok(kohlenhydrateIntake);
+        }
+
+        [ProducesResponseType(typeof(Dictionary<string, int>), StatusCodes.Status200OK)]
+        [HttpGet("IntakeByWeek/{email}/{startDate}")]
+        public async Task<IActionResult> IntakeByWeek(string email, DateTime startDate)
+        {
+            var user = await _unitOfWork.UserRepository.GetUserByEmail(email);
+            if (user == null)
+                return NotFound("User not found");
+
+            var intakeData = await _unitOfWork.CalorieDataRepository.IntakeByWeek(user.Id, startDate);
+            return Ok(intakeData);
+        }
+
+        [ProducesResponseType(typeof(Dictionary<string, int>), StatusCodes.Status200OK)]
+        [HttpGet("IntakeByMonth/{email}/{year}/{month}")]
+        public async Task<IActionResult> IntakeByMonth(string email, int year, int month)
+        {
+            var user = await _unitOfWork.UserRepository.GetUserByEmail(email);
+            if (user == null)
+                return NotFound("User not found");
+
+            var intakeData = await _unitOfWork.CalorieDataRepository.IntakeByMonth(user.Id, year, month);
+            return Ok(intakeData);
+        }
+
+        [ProducesResponseType(typeof(Dictionary<string, int>), StatusCodes.Status200OK)]
+        [HttpGet("IntakeByYear/{email}/{year}")]
+        public async Task<IActionResult> IntakeByYear(string email, int year)
+        {
+            var user = await _unitOfWork.UserRepository.GetUserByEmail(email);
+            if (user == null)
+                return NotFound("User not found");
+
+            var intakeData = await _unitOfWork.CalorieDataRepository.IntakeByYear(user.Id, year);
+            return Ok(intakeData);
+        }
     }
 }
