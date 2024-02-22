@@ -49,7 +49,7 @@ namespace Persistence
 
         public async Task<CalorieData> GetCalorieDataByIdAsync(int calorieId)
         {
-            return await _dbContext.CalorieData.FirstAsync(c => c.Id == calorieId); 
+            return await _dbContext.CalorieData.FirstAsync(c => c.Id == calorieId);
         }
         public async Task<int> ProteinIntakeByToday(int userId)
         {
@@ -83,7 +83,7 @@ namespace Persistence
 
         public async Task<Dictionary<string, int>> IntakeByWeek(int userId, DateTime startDate)
         {
-            DateTime endDate = startDate.AddDays(6); 
+            DateTime endDate = startDate.AddDays(6);
             var weeklyData = await _dbContext.CalorieData
                 .Where(cd => cd.UserId == userId && cd.Datum.Date >= startDate.Date && cd.Datum.Date <= endDate.Date)
                 .ToListAsync();
@@ -125,6 +125,22 @@ namespace Persistence
             intakeData["Kohlenhydrate"] = yearlyData.Sum(cd => cd.Kohlenhydrate);
 
             return intakeData;
+        }
+
+        public async Task<Dictionary<int, List<CalorieData>>> GetCalorieDataGroupedByUserId(int userId)
+        {
+            var calorieData = await _dbContext.CalorieData
+                .Where(cd => cd.UserId == userId)
+                .ToListAsync();
+
+            var groupedData = calorieData
+                .GroupBy(cd => cd.UserId)
+                .ToDictionary(
+                    group => group.Key,
+                    group => group.ToList()
+                );
+
+            return groupedData;
         }
     }
 }

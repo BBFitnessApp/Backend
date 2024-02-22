@@ -40,7 +40,7 @@ namespace Users.Web.ApiControllers
         }
 
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
-        [HttpGet("getUserByEmail")]
+        [HttpGet("getUserByEmail ")]
         public async Task<IActionResult> GetUserByEmail(string email)
         {
             var user = await _unitOfWork.UserRepository.GetUserByEmail(email);

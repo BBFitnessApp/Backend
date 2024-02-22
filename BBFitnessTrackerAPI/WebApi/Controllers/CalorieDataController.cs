@@ -159,5 +159,13 @@ namespace WebApi.Controllers
             var intakeData = await _unitOfWork.CalorieDataRepository.IntakeByYear(user.Id, year);
             return Ok(intakeData);
         }
+
+
+        [HttpGet("calorieData/{userId}")]
+        public async Task<IActionResult> GetCalorieDataGroupedByUserId(int userId)
+        {
+            var groupedData = await _unitOfWork.CalorieDataRepository.GetCalorieDataGroupedByUserId(userId);
+            return Ok(groupedData);
+        }
     }
 }

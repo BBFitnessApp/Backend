@@ -23,7 +23,9 @@ namespace Core.Contracts
 
         Task<Dictionary<string, int>> IntakeByMonth(int userId, int year, int month);
 
-        Task<Dictionary<string, int>> IntakeByYear(int userId, int year); 
+        Task<Dictionary<string, int>> IntakeByYear(int userId, int year);
+
+        Task<Dictionary<int, List<CalorieData>>> GetCalorieDataGroupedByUserId(int userId);
 
 
         void Add(CalorieData calorieData);
