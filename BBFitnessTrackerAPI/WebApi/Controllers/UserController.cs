@@ -29,7 +29,7 @@ namespace Users.Web.ApiControllers
         }
 
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
-        [HttpGet("{userId}")]
+        [HttpGet("GetUserById/{userId}")]
         public async Task<IActionResult> GetUserById(int userId)
         {
             var user = await _unitOfWork.UserRepository.GetUserById(userId);
@@ -40,7 +40,7 @@ namespace Users.Web.ApiControllers
         }
 
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
-        [HttpGet("getUserByEmail")]
+        [HttpGet("GetUserByEmail/getUserByEmail")]
         public async Task<IActionResult> GetUserByEmail(string email)
         {
             var user = await _unitOfWork.UserRepository.GetUserByEmail(email);
@@ -62,7 +62,7 @@ namespace Users.Web.ApiControllers
         }
 
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
-        [HttpPost]
+        [HttpPost("AddUser")]
         public async Task<IActionResult> AddUser([FromBody] User user)
         {
             _unitOfWork.UserRepository.Add(user);
@@ -71,7 +71,7 @@ namespace Users.Web.ApiControllers
         }
 
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [HttpDelete("{userId}")]
+        [HttpDelete("DeleteUser/{userId}")]
         public async Task<IActionResult> DeleteUser(int userId)
         {
             var user = await _unitOfWork.UserRepository.GetUserById(userId);
@@ -83,7 +83,7 @@ namespace Users.Web.ApiControllers
         }
 
         [ProducesResponseType(204)]
-        [HttpPut("{id}")]
+        [HttpPut("UpdateUser/{id}")]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] User user)
         {
             if (id != user.Id)

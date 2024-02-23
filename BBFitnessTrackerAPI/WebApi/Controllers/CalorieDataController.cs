@@ -52,7 +52,7 @@ namespace WebApi.Controllers
         }
 
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteCalorieData/{id}")]
         public async Task<IActionResult> DeleteCalorieData(int id)
         {
             var calorieData = await _unitOfWork.CalorieDataRepository.GetCalorieDataByIdAsync(id);
@@ -65,7 +65,7 @@ namespace WebApi.Controllers
         }
 
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [HttpPut("{id}")]
+        [HttpPut("UpdateCalorieData/{id}")]
         public async Task<IActionResult> UpdateCalorieData(int id, [FromBody] CalorieData calorieData)
         {
             if (id != calorieData.Id)
@@ -161,7 +161,7 @@ namespace WebApi.Controllers
         }
 
 
-        [HttpGet("calorieData/{userId}")]
+        [HttpGet("GetCalorieDataGroupedByUserId/calorieData/{userId}")]
         public async Task<IActionResult> GetCalorieDataGroupedByUserId(int userId)
         {
             var groupedData = await _unitOfWork.CalorieDataRepository.GetCalorieDataGroupedByUserId(userId);

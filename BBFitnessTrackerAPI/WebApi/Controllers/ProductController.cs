@@ -30,7 +30,7 @@ namespace WebApi.Controllers
         }
 
         [ProducesResponseType(typeof(Product), 200)]
-        [HttpGet("{id}")]
+        [HttpGet("GetProductById/{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
             var product = await _unitOfWork.ProductRepository.GetProductByIdAsync(id);
@@ -149,7 +149,7 @@ namespace WebApi.Controllers
         }
 
         [ProducesResponseType(204)]
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}/")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             var product = await _unitOfWork.ProductRepository.GetProductByIdAsync(id);
@@ -162,7 +162,7 @@ namespace WebApi.Controllers
         }
 
         [ProducesResponseType(204)]
-        [HttpPut("{id}")]
+        [HttpPut("{id}/")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] Product product)
         {
             if (id != product.Id)
