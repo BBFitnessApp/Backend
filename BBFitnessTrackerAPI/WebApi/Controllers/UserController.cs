@@ -21,7 +21,7 @@ namespace Users.Web.ApiControllers
         }
 
         [ProducesResponseType(typeof(List<User>), StatusCodes.Status200OK)]
-        [HttpGet]
+        [HttpGet("GetUsers")]
         public async Task<IActionResult> GetUsers()
         {
             var users = await _unitOfWork.UserRepository.GetAllAsync();

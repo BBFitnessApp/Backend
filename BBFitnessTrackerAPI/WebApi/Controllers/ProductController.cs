@@ -22,7 +22,7 @@ namespace WebApi.Controllers
         }
 
         [ProducesResponseType(typeof(IEnumerable<Product>), 200)]
-        [HttpGet]
+        [HttpGet("GetAllProducts")]
         public async Task<IActionResult> GetAllProducts()
         {
             var products = await _unitOfWork.ProductRepository.GetAllAsync();
@@ -140,7 +140,7 @@ namespace WebApi.Controllers
         }
        
         [ProducesResponseType(typeof(Product), 201)]
-        [HttpPost]
+        [HttpPost("AddProduct")]
         public async Task<IActionResult> AddProduct([FromBody] Product product)
         {
             _unitOfWork.ProductRepository.Add(product);
@@ -149,7 +149,7 @@ namespace WebApi.Controllers
         }
 
         [ProducesResponseType(204)]
-        [HttpDelete("{id}/")]
+        [HttpDelete("DeleteProduct/{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             var product = await _unitOfWork.ProductRepository.GetProductByIdAsync(id);
@@ -162,7 +162,7 @@ namespace WebApi.Controllers
         }
 
         [ProducesResponseType(204)]
-        [HttpPut("{id}/")]
+        [HttpPut("UpdateProduct/{id}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] Product product)
         {
             if (id != product.Id)

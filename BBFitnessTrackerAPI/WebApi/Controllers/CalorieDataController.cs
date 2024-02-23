@@ -43,7 +43,7 @@ namespace WebApi.Controllers
         }
 
         [ProducesResponseType(typeof(CalorieData), StatusCodes.Status201Created)]
-        [HttpPost("post")]
+        [HttpPost("AddCalorieData")]
         public async Task<IActionResult> AddCalorieData([FromBody] CalorieData calorieData)
         {
             _unitOfWork.CalorieDataRepository.Add(calorieData);
