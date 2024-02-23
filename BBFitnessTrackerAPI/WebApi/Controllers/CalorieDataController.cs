@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
 {
+    [Produces("application/json")]
+    [Route("api/[controller]")]
+    [ApiController]
     public class CalorieDataController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
