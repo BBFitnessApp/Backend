@@ -398,97 +398,12 @@ namespace Persistence
                     UserId = users[0].Id, // Assuming the user ID is 1 for the first user
                     User = users[0],  // Assuming the user ID is 1 for the first user
                     Datum = DateTime.Now.Date,
-                    Kalorienaufnahme = 1800,
-                    Fette = 80,
-                    Proteine = 160,
-                    Kohlenhydrate = 240
-                },
-                new CalorieData
-                {
-                    UserId = users[1].Id, // Assuming the user ID is 1 for the first user
-                    User = users[1], // Assuming the user ID is 2 for the second user
-                    Datum = DateTime.Now.Date.AddDays(-1), // Set Datum to yesterday's date
-                    Kalorienaufnahme = 2100,
-                    Fette = 97,
-                    Proteine = 162,
-                    Kohlenhydrate = 227
-                },
-                new CalorieData
-                {
-                    UserId = users[2].Id, // Assuming the user ID is 1 for the first user
-                    User = users[2], // Assuming the user ID is 3 for the third user
-                    Datum = DateTime.Now.Date.AddDays(-2), // Set Datum to two days ago
-                    Kalorienaufnahme = 1950,
-                    Fette = 132,
-                    Proteine = 242,
-                    Kohlenhydrate = 352
-                },
-
-                    new CalorieData
-                    {
-                        UserId = users[4].Id,
-                                            User = users[4], // Assuming the user ID is 10 for the tenth user
-// Assuming the user ID is 5 for the fifth user
-                        Datum = DateTime.Now.Date.AddDays(-4), // Set Datum to four days ago
-                        Kalorienaufnahme = 1850,
-                        Fette = 90,
-                        Proteine = 180,
-                        Kohlenhydrate = 270
-                    },
-                    new CalorieData
-                    {
-                        UserId = users[5].Id,
-                                            User = users[5], // Assuming the user ID is 10 for the tenth user
-// Assuming the user ID is 6 for the sixth user
-                        Datum = DateTime.Now.Date.AddDays(-5), // Set Datum to five days ago
-                        Kalorienaufnahme = 2350,
-                        Fette = 160,
-                        Proteine = 240,
-                        Kohlenhydrate = 320
-                    },
-                    new CalorieData
-                    {
-                        UserId = users[6].Id,
-                                            User = users[6], // Assuming the user ID is 10 for the tenth user
-// Assuming the user ID is 7 for the seventh user
-                        Datum = DateTime.Now.Date.AddDays(-6), // Set Datum to six days ago
-                        Kalorienaufnahme = 2000,
-                        Fette = 132,
-                        Proteine = 242,
-                        Kohlenhydrate = 352
-                    },
-                    new CalorieData
-                    {
-                        UserId = users[7].Id,
-                                            User = users[7], // Assuming the user ID is 10 for the tenth user
-// Assuming the user ID is 8 for the eighth user
-                        Datum = DateTime.Now.Date.AddDays(-7), // Set Datum to seven days ago
-                        Kalorienaufnahme = 2500,
-                        Fette = 176,
-                        Proteine = 256,
-                        Kohlenhydrate = 336
-                    },
-                    new CalorieData
-                    {
-                        UserId = users[8].Id, // Assuming the user ID is 9 for the ninth user
-                                            User = users[8], // Assuming the user ID is 10 for the tenth user
-
-                        Datum = DateTime.Now.Date.AddDays(-8), // Set Datum to eight days ago
-                        Kalorienaufnahme = 1900,
-                        Fette = 126,
-                        Proteine = 216,
-                        Kohlenhydrate = 324
-                    },
-                    new CalorieData
-                    {
-                         UserId = users[9].Id, // Assuming the user ID is 1 for the first user
-                    User = users[9], // Assuming the user ID is 10 for the tenth user
-                        Datum = DateTime.Now.Date.AddDays(-9), // Set Datum to nine days ago
-                        Kalorienaufnahme = 2100,
-                        Fette = 124,
-                        Proteine = 208,
-                        Kohlenhydrate = 312
-                    }
+                    Kalorienaufnahme = 1800.0,
+                    Fette = 80.0,
+                    Proteine = 160.0,
+                    Kohlenhydrate = 240.0
+                }
+               
                     // Add 9 more CalorieData with similar data...
                 };
 
