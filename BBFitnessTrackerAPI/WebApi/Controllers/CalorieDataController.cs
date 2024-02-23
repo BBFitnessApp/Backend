@@ -16,8 +16,6 @@ namespace WebApi.Controllers
             _unitOfWork = unitOfWork;
         }
         
-
-
         [ProducesResponseType(typeof(List<CalorieData>), StatusCodes.Status200OK)]
         [HttpGet("{userId}/{date}")]
         public async Task<IActionResult> GetCalorieDataByUserAndDate(int userId, DateTime date)

@@ -10,19 +10,14 @@
 
     public class Nutriments
     {
-        [JsonProperty("energy-kcal_value")]
-        public double Kalorien { get; set; }
+         public double Kalorien { get; set; }
 
-        [JsonProperty("fat")]
-        public double Fette { get; set; }
+         public double Fette { get; set; }
 
-        [JsonProperty("proteins")]
-        public double Proteine { get; set; }
+         public double Proteine { get; set; }
 
-        [JsonProperty("carbohydrates")]
-        public double Kohlenhydrate { get; set; }
+         public double Kohlenhydrate { get; set; }
 
-        [JsonProperty("product_name")]
-        public string Name { get; set; } = string.Empty;
+         public string Name { get; set; } = string.Empty;
     }
 }

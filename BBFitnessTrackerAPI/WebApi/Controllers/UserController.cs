@@ -15,11 +15,11 @@ namespace Users.Web.ApiControllers
     {
         IUnitOfWork _unitOfWork;
 
-        public UserController(IUnitOfWork unitOfWork)
+        public UserController(IUnitOfWork unitOfWork)                   
         {
             _unitOfWork = unitOfWork;
         }
-
+        
         [ProducesResponseType(typeof(List<User>), StatusCodes.Status200OK)]
         [HttpGet("GetUsers")]
         public async Task<IActionResult> GetUsers()
